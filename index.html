@@ -3,44 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Fresh Web App</title>
+    <title>AI Hub - The Ultimate AI Tool Directory</title>
     <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --primary: #3b82f6;
+            --accent: #10b981;
+        }
         body {
             font-family: system-ui, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
             margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: #f0fdf4;
-            color: #166534;
+            padding: 0;
         }
-        .card {
-            background: #ffffff;
-            padding: 2rem;
-            border-radius: 16px;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+        header {
             text-align: center;
-            border: 1px solid #bbf7d0;
+            padding: 4rem 2rem 2rem;
+            background: linear-gradient(180deg, #1e1b4b 0%, var(--bg-color) 100%);
         }
-        h1 { margin-top: 0; color: #15803d; }
-        button {
-            background-color: #16a34a;
-            color: white;
-            border: none;
-            padding: 0.75rem 1.5rem;
+        h1 { font-size: 2.5rem; margin-bottom: 0.5rem; color: #fff; }
+        .subtitle { color: var(--text-muted); font-size: 1.2rem; margin-bottom: 2rem; }
+        
+        /* Banner Ad Placeholder - High Revenue Spot */
+        .ad-banner {
+            max-width: 728px;
+            background: #1e293b;
+            border: 1px dashed #475569;
+            color: var(--text-muted);
+            padding: 1rem;
+            margin: 0 auto 2rem;
+            text-align: center;
             border-radius: 8px;
-            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+        
+        /* Search and Categories */
+        .search-box {
+            display: block;
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto 2rem;
+            padding: 0.75rem 1rem;
+            border-radius: 9999px;
+            border: 1px solid #475569;
+            background: #1e293b;
+            color: white;
             font-size: 1rem;
         }
-        button:hover { background-color: #15803d; }
+        
+        .filters { display: flex; justify-content: center; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 3rem; }
+        .filter-btn {
+            background: #1e293b;
+            color: var(--text-main);
+            border: 1px solid #475569;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+        .filter-btn.active, .filter-btn:hover { background: var(--primary); border-color: var(--primary); }
+
+        /* Tool Grid */
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; }
+        .card {
+            background: var(--card-bg);
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s;
+        }
+        .card:hover { transform: translateY(-4px); border-color: var(--primary); }
+        .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+        .badge { background: #334155; color: #93c5fd; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem; font-weight: bold; }
+        .badge.featured { background: #064e3b; color: #6ee7b7; }
+        .card-title { font-size: 1.25rem; font-weight: bold; margin: 0; }
+        .card-desc { color: var(--text-muted); font-size: 0.95rem; line-height: 1.5; margin-bottom: 1.5rem; }
+        
+        .btn-visit {
+            display: block;
+            text-align: center;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            padding: 0.75rem;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+        .btn-visit:hover { background: #2563eb; }
     </style>
 </head>
 <body>
-    <div class="card">
-        <h1>🎉 Fresh Start Success!</h1>
-        <p>Your brand new, clean deployment is officially live on Vercel.</p>
-        <button onclick="alert('Working perfectly!')">Test Click</button>
-    </div>
+
+    <header>
+        <h1>🚀 Top AI Tools Directory</h1>
+        <p class="subtitle">Discover the absolute best AI tools to boost your productivity</p>
+        
+        <!-- Premium Sponsor Ad Space -->
+        <div class="ad-banner">
+            Targeted Premium Advertisement Area (Earn $100-$500/month per slot)
+        </div>
+
+        <input type="text" class="search-box" placeholder="Search for AI tools (e.g., Writing, Coding, Images)...">
+        
+        <div class="filters">
+            <button class="filter-btn active">All Tools</button>
+            <button class="filter-btn">Coding & Tech</button>
+            <button class="filter-btn">Writing & Content</button>
+            <button class="filter-btn">Image & Video</button>
+            <button class="filter-btn">Productivity</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="grid">
+            
+            <!-- Tool 1 (Sponsored/Premium Placement Idea) -->
+            <div class="card">
+                <div>
+                    <div class="card-header">
+                        <h3 class="card-title">v0 by Vercel</h3>
+                        <span class="badge featured">★ Sponsored</span>
+                    </div>
+                    <p class="card-desc">An incredible generative UI system by Vercel that helps you build fully functioning web interfaces using simple text prompts.</p>
+                </div>
+                <!-- Put your affiliate link in the href -->
+                <a href="https://v0.dev" target="_blank" class="btn-visit">Try for Free</a>
+            </div>
+
+            <!-- Tool 2 -->
+            <div class="card">
+                <div>
+                    <div class="card-header">
+                        <h3 class="card-title">ChatGPT</h3>
+                        <span class="badge">Productivity</span>
+                    </div>
+                    <p class="card-desc">The industry-leading AI language model by OpenAI. Perfect for complex brainstorming, content drafting, coding help, and learning.</p>
+                </div>
+                <a href="https://chatgpt.com" target="_blank" class="btn-visit">Visit Website</a>
+            </div>
+
+            <!-- Tool 3 -->
+            <div class="card">
+                <div>
+                    <div class="card-header">
+                        <h3 class="card-title">Midjourney</h3>
+                        <span class="badge">Image & Video</span>
+                    </div>
+                    <p class="card-desc">An advanced AI system that generates stunning, hyper-realistic imagery and digital artwork from simple text prompt descriptions.</p>
+                </div>
+                <a href="https://midjourney.com" target="_blank" class="btn-visit">Generate Images</a>
+            </div>
+
+            <!-- Tool 4 -->
+            <div class="card">
+                <div>
+                    <div class="card-header">
+                        <h3 class="card-title">Cursor</h3>
+                        <span class="badge">Coding & Tech</span>
+                    </div>
+                    <p class="card-desc">An AI-first code editor designed for pair programming. Incredibly powerful for writing scripts, building software, and fixing bugs.</p>
+                </div>
+                <a href="https://cursor.com" target="_blank" class="btn-visit">Download App</a>
+            </div>
+
+        </div>
+    </main>
+
 </body>
 </html>
+
